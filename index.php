@@ -50,6 +50,7 @@ if ($conn->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="cor.jpg" type="TechMaster.png">
     <title>@yzzin.xz ❤</title>
 </head>
 <body>

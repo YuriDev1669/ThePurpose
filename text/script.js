@@ -111,7 +111,5 @@ function createSnowflake() {
   createSnowflakes(); // Iniciar a criação de flocos de neve
 
 
-window.setTimeout(()=>{
-  window.open('../msg','_self')
-},8000)
+
   

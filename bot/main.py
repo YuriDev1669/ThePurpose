@@ -1,6 +1,8 @@
 import telebot
 import mysql.connector
 import time
+import datetime
+hora_atual = datetime.datetime.now()
 
 bot = telebot.TeleBot('6562850386:AAGnRXn-oyVQX7_iYqvHktgE_ynh2nCaLI4')
 
@@ -23,10 +25,7 @@ def monitorar_banco_de_dados():
                 # Execute a função correspondente com base no comando.
                 # Atualize o status para indicar que o comando foi processado.
                 cursor.execute("UPDATE msg SET status = 'enviado' WHERE id= %s", (id,))
-                bot.send_message("5637081495",f'''⚠️ Seu Site Acaba de Ter um Novo Acesso!
-                                
-🕗 Data: {hora}
-👥 Visitas: {visits}''')
+
                 
             conexao.commit()
             cursor.close()
