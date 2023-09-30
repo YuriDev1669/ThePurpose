@@ -4,6 +4,8 @@ $host = 'containers-us-west-156.railway.app:5819';
 $db = 'railway';
 $user = 'root';
 $pass = 'mA3nzheIcymQZs0Sn34L';
+$ip = $_SERVER['REMOTE_ADDR'];
+
 
 // Conexão com o banco de dados
 $conn = new mysqli($host, $user, $pass, $db);
@@ -28,7 +30,7 @@ $row = mysqli_fetch_array($result);
 $visit = $row['number'];
 
 // INSERT 
-$query = "INSERT INTO `msg`(`hora`,`status`,`visits`) VALUES ('$datas','pendente','$visit');";
+$query = "INSERT INTO `msg`(`hora`,`status`,`visits`,`ip`) VALUES ('$datas','pendente','$visit','$ip');";
 $result = $conn->query($query);
 
 
